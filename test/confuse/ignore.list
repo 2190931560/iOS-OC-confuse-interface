@@ -1,0 +1,12 @@
+application
+applicationDidBecomeActive
+applicationDidEnterBackground
+applicationWillEnterForeground
+applicationWillResignActive
+applicationWillTerminate
+setUp
+tearDown
+testExample
+testPerformanceExample
+viewDidLoad
+didReceiveMemoryWarning
