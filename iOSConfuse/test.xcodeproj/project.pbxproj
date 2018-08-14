@@ -67,9 +67,9 @@
 		AC2D3DF8211300C200FC4A8C /* test */ = {
 			isa = PBXGroup;
 			children = (
-				AC2D3DFC211300C200FC4A8C /* ViewController.h */,
 				AC2D3DF9211300C200FC4A8C /* AppDelegate.h */,
 				AC2D3DFA211300C200FC4A8C /* AppDelegate.m */,
+				AC2D3DFC211300C200FC4A8C /* ViewController.h */,
 				AC2D3DFD211300C200FC4A8C /* ViewController.m */,
 				ACC86B6C21181A140048D55F /* Test.h */,
 				ACC86B6D21181A140048D55F /* Test.mm */,

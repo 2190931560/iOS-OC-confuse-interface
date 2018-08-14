@@ -31,6 +31,10 @@ static int is_debugged(){
     
     return (Kproc.kp_proc.p_flag & P_TRACED) ? 1 : 0;
 }
+- (IBAction)btnClick:(id)sender {
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

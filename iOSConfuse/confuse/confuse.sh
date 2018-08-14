@@ -12,9 +12,9 @@ HEAD_FILE="$PROJECT_DIR/confuse/confuseHeader.h"
 export LC_CTYPE=C
 
 #过滤方法名
-grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.m'  --include '*.mm' |sed "s/[+-]//g"|sed "s/[();,: *\^\/\{]/ /g"|sed "s/[ ]*</</"| sed "/^[ ]*IBAction/d"|awk '{split($0,b," "); print b[2]; }'| sort|uniq |sed "/^$/d"|grep -Fvf $IGNORE_SYMBOL_FILE >$STRING_SYMBOL_FILE
+grep -h -r -I  "^ *[-+]" $CONFUSE_FILE  --include '*.m'  --include '*.mm'|grep -v 'IBAction'|sed 's/ //g'|sed 's/[+-]//g'|sed "s/[();,: *\^\/\{]/ /g"|awk '{split($0,b," "); print b[2]; }'| sort|uniq |sed "/^$/d"|grep -Fvf $IGNORE_SYMBOL_FILE >$STRING_SYMBOL_FILE
 #过滤class名
-grep -h -r -I  "^ *@interface" $CONFUSE_FILE  --include '*.h'|awk '{split($0,b,":"); print b[1]; }'|sed 's/@interface//'|sed 's/ *//'|grep -Fvf $IGNORE_SYMBOL_FILE >>$STRING_SYMBOL_FILE
+grep -h -r -I  "^ *@interface" $CONFUSE_FILE  --include '*.h'|sed 's/^[ ]*//g'|awk '{split($0,b,":"); print b[1]; }'|sed 's/@interface//'|sed 's/ *//'| sort|uniq |grep -Fvf $IGNORE_SYMBOL_FILE >>$STRING_SYMBOL_FILE
 
 #生成随机方法名 用于替换
 ramdomString()
