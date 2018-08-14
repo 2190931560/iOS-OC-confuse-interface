@@ -44,7 +44,7 @@ static int is_debugged(){
 
 -(void)test
 {
-    
+
 }
 +(void)staticTest
 {

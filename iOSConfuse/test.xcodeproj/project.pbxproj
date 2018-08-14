@@ -13,9 +13,7 @@
 		AC2D3E03211300C300FC4A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2D3E02211300C300FC4A8C /* Assets.xcassets */; };
 		AC2D3E06211300C300FC4A8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2D3E04211300C300FC4A8C /* LaunchScreen.storyboard */; };
 		AC2D3E09211300C300FC4A8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3E08211300C300FC4A8C /* main.m */; };
-		ACC86B682117F4780048D55F /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = ACC86B632117F4780048D55F /* confuse.sh */; };
-		ACC86B692117F4780048D55F /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = ACC86B652117F4780048D55F /* func.list */; };
-		ACC86B6A2117F4780048D55F /* ignore.list in Resources */ = {isa = PBXBuildFile; fileRef = ACC86B662117F4780048D55F /* ignore.list */; };
+		ACC86B6E21181A140048D55F /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACC86B6D21181A140048D55F /* Test.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +32,8 @@
 		ACC86B652117F4780048D55F /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
 		ACC86B662117F4780048D55F /* ignore.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ignore.list; sourceTree = "<group>"; };
 		ACC86B672117F4780048D55F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		ACC86B6C21181A140048D55F /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		ACC86B6D21181A140048D55F /* Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +67,12 @@
 		AC2D3DF8211300C200FC4A8C /* test */ = {
 			isa = PBXGroup;
 			children = (
+				AC2D3DFC211300C200FC4A8C /* ViewController.h */,
 				AC2D3DF9211300C200FC4A8C /* AppDelegate.h */,
 				AC2D3DFA211300C200FC4A8C /* AppDelegate.m */,
-				AC2D3DFC211300C200FC4A8C /* ViewController.h */,
 				AC2D3DFD211300C200FC4A8C /* ViewController.m */,
+				ACC86B6C21181A140048D55F /* Test.h */,
+				ACC86B6D21181A140048D55F /* Test.mm */,
 				AC2D3DFF211300C200FC4A8C /* Main.storyboard */,
 				AC2D3E02211300C300FC4A8C /* Assets.xcassets */,
 				AC2D3E04211300C300FC4A8C /* LaunchScreen.storyboard */,
@@ -151,10 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2D3E06211300C300FC4A8C /* LaunchScreen.storyboard in Resources */,
-				ACC86B6A2117F4780048D55F /* ignore.list in Resources */,
-				ACC86B692117F4780048D55F /* func.list in Resources */,
 				AC2D3E03211300C300FC4A8C /* Assets.xcassets in Resources */,
-				ACC86B682117F4780048D55F /* confuse.sh in Resources */,
 				AC2D3E01211300C200FC4A8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2D3DFE211300C200FC4A8C /* ViewController.m in Sources */,
+				ACC86B6E21181A140048D55F /* Test.mm in Sources */,
 				AC2D3E09211300C300FC4A8C /* main.m in Sources */,
 				AC2D3DFB211300C200FC4A8C /* AppDelegate.m in Sources */,
 			);
@@ -327,7 +327,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72U33C4H3Q;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				HEADER_SEARCH_PATHS = $PROJECT_DIR/confuse/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = confuse/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,7 +347,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72U33C4H3Q;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				HEADER_SEARCH_PATHS = $PROJECT_DIR/confuse/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = confuse/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
